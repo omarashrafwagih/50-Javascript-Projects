@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+.card {
+  height: 80vh;
+  width: 120px;
+  border-radius: 70px;
+  padding: 10px;
+  margin: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.25);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.card:hover {
+  transform: scale(1.01);
+}
+.card1 {
+  background-image: url("./cards/bird.jpg");
+}
+.card2 {
+  background-image: url("./cards/cloud.jpg");
+}
+.card3 {
+  background-image: url("./cards/boat.jpg");
+}
+.card4 {
+  background-image: url("./cards/landscape.jpg");
+}
+.card5 {
+  background-image: url("./cards/moon.jpg");
+}
+.card span {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 20px;
+  color: white;
+  user-select: none;
+  display: none;
+}
+.card1 span {
+  display: block;
+}
+.card.active {
+  flex-grow: 1;
+}
