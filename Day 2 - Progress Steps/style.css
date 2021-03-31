@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+.container {
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  padding: 3px;
+  margin: 1px;
+  color: rgb(54, 54, 54);
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 18px;
+  border: 2px solid rgb(148, 148, 148);
+}
+.number.active {
+  border-color: rgb(0, 225, 255);
+}
+
+.number:first-of-type {
+  border: 2px solid rgb(0, 225, 255);
+}
+
+.line {
+  width: 15vw;
+  min-width: 50px;
+  height: 5px;
+  border-radius: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  transition: all 200ms ease-in;
+}
+
+.line.active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  border-radius: 100px;
+  background-color: rgba(0, 255, 255);
+  animation: fillLine 200ms ease-in-out forwards;
+}
+
+@keyframes fillLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -80px;
+}
+
+button {
+  border-radius: 6px;
+  margin: 10px;
+  width: 120px;
+  height: 40px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(175, 246, 255, 0.8);
+  color: rgb(82, 82, 82);
+  transition: all 150ms ease-in-out;
+}
+button:hover {
+  transform: scale(0.95);
+}
+
+button.active {
+  transition: all 200ms ease-in-out;
+  cursor: not-allowed;
+  user-select: none;
+  background-color: rgb(196, 196, 196);
+  color: rgb(240, 240, 240);
+}
+button.active:hover {
+  transform: scale(1);
+}
