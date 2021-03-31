@@ -23,11 +23,11 @@ body {
 
 .card {
   height: 80vh;
-  width: 120px;
-  border-radius: 70px;
+  width: 100px;
+  border-radius: 80px;
   padding: 10px;
   margin: 10px;
-  background-position: center;
+  background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(0.25);
@@ -66,4 +66,21 @@ body {
 }
 .card.active {
   flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  .card {
+    height: 10vh;
+    width: 80vw;
+  }
+  .card:nth-of-type(4),
+  .card:nth-of-type(5) {
+    display: none;
+  }
+  .card.active {
+    width: 80vw;
+  }
 }
