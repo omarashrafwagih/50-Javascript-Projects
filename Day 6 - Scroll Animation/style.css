@@ -18,7 +18,6 @@ body {
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  height: 1800px;
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -44,67 +43,13 @@ h2 {
   line-height: 110px;
   border-radius: 10px;
   box-shadow: 1px 7px 12px 8px rgba(0, 0, 0, 0.8);
+  transition: transform 750ms ease-in-out;
+  transform: translateX(400%);
 }
 
 .content:nth-of-type(odd) {
-  transform: translateX(400%);
-}
-
-.content:nth-of-type(even) {
   transform: translateX(-400%);
 }
-
-.content.active:nth-of-type(odd) {
-  transform: translateX(400%);
-  animation: slideFromLeft 1s ease-in-out forwards;
-}
-
-.content.active:nth-of-type(even) {
-  transform: translateX(-400%);
-  animation: slideFromRight 1s ease-in-out forwards;
-}
-
-.content.active-reverse:nth-of-type(odd) {
-  transform: translateX(-400%);
-  animation: ReverseslideFromLeft 1s ease-in-out both;
-}
-.content.active-reverse:nth-of-type(even) {
-  transform: translateX(400%);
-  animation: ReverseslideFromRight 1s ease-in-out both;
-}
-
-@keyframes slideFromLeft {
-  from {
-    transform: translateX(400%);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes slideFromRight {
-  from {
-    transform: translateX(-400%);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-@keyframes ReverseslideFromLeft {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(400%);
-  }
-}
-
-@keyframes ReverseslideFromRight {
-  from {
-    transform: translateX(0px);
-  }
-  to {
-    transform: translateX(-400%);
-  }
+.content.show {
+  transform: translateX(0);
 }
