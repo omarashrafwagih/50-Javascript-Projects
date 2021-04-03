@@ -66,6 +66,10 @@ form p {
   position: absolute;
   top: 0;
 }
+form p.active {
+  color: rgb(125 189 241);
+}
+
 form p span {
   position: absolute;
   top: 0;
@@ -124,8 +128,13 @@ form input {
   caret-color: white;
   height: 30px;
   color: white;
-  font-size: 18px;
+  font-size: 14px;
+  letter-spacing: 1px;
   font-weight: 100;
+}
+
+form input.active {
+  border-bottom: 2px solid rgb(125 189 241);
 }
 
 form input[type="submit"] {
