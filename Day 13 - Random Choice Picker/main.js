@@ -6,6 +6,10 @@ let choicesDiv = document.querySelector(".choices");
 textarea.addEventListener("keyup", () => {
   text = textarea.value;
   arrayText = text.split(",");
+
+  let mySet = new Set(arrayText);
+  arrayText = [...mySet];
+
   choicesDiv.innerHTML = "";
   createChoices();
 });
@@ -21,6 +25,7 @@ function createChoices() {
 
 textarea.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
+    textarea.disabled = true;
     textarea.value = "";
 
     let intervalCode = setInterval(() => {
@@ -34,6 +39,7 @@ textarea.addEventListener("keyup", (e) => {
 
     setTimeout(() => {
       clearInterval(intervalCode);
+      textarea.disabled = false;
     }, 3000);
   }
 });
