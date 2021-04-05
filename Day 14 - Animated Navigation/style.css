@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgb(113, 189, 255);
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+section {
+  position: relative;
+}
+section .top {
+  background-color: rgb(199, 228, 253);
+  height: 50vh;
+  width: 100%;
+  display: block;
+}
+
+.container {
+  background-color: transparent;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100vw;
+}
+.container .menu {
+  transition: all 500ms ease;
+  width: 0px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: white;
+  color: rgb(100, 100, 100);
+  overflow: hidden;
+}
+.container .menu.active {
+  width: 400px;
+}
+.container .menu a {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(88, 88, 88);
+  margin: 0px 10px;
+  padding: 0px 10px;
+  transition: transform 800ms ease-in-out, color 300ms ease;
+  opacity: 0;
+}
+.container .menu a:hover {
+  color: rgb(136, 199, 255);
+}
+.container .menu a.active {
+  opacity: 1;
+  transform: rotate(1080deg);
+}
+
+.container .box {
+  cursor: pointer;
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 60px;
+  text-align: center;
+  color: rgb(139, 201, 255);
+  position: relative;
+}
+
+.box span {
+  transform: translate(50%, -50%) rotate(0deg);
+  transition: transform 1000ms ease-in-out;
+}
+
+.box span.active:first-of-type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%) rotate(40deg);
+}
+.box span.active:last-of-type {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-40deg);
+}
