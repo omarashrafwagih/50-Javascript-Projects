@@ -44,7 +44,6 @@ function updateBigGlass() {
       drop.setAttribute("src", "./images/drop.svg");
       dropLeft = Math.ceil(Math.random() * 100);
       dropLeft = dropLeft + "%";
-      console.log(dropLeft);
       drop.style.left = dropLeft;
       document.body.appendChild(drop);
       setTimeout(() => {
