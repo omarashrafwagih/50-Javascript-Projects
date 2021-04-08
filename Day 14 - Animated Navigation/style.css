@@ -102,3 +102,17 @@ section .top {
   left: 50%;
   transform: translate(-50%, -50%) rotate(-40deg);
 }
+
+@media (max-width: 768px) {
+  .container .menu {
+    height: auto;
+    width: 0;
+  }
+  .container .menu.active {
+    height: 250px;
+    width: 50%;
+  }
+  .container .menu a {
+    display: block;
+  }
+}
