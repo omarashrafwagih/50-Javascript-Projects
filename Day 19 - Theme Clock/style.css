@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  transition: 500ms ease;
+}
+body.dark {
+  background-color: black;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+.mode {
+  font-size: 26px;
+  padding: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transform: rotateY(180deg) scale(1);
+  cursor: pointer;
+  transition: all 200ms ease;
+  color: black;
+}
+.mode.dark {
+  color: white;
+}
+.mode:hover {
+  transform: rotateY(180deg) scale(1.1);
+}
+
+.sound {
+  font-size: 26px;
+  padding: 5px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  color: black;
+}
+.sound.dark {
+  color: white;
+}
+.sound:hover {
+  transform: scale(1.1);
+}
+/* ------------------------------------------------------------------------------------------------- */
+
+.clock {
+  width: 230px;
+  height: 230px;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  position: relative;
+}
+.clock.dark {
+  background-color: rgba(0, 0, 80, 0.2);
+}
+.needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(0deg);
+  background-color: black;
+  transition: all 400ms ease;
+}
+.needle.dark {
+  background-color: white;
+}
+
+.needle-hour {
+  height: 70px;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle-minute {
+  height: 110px;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+.needle-second {
+  background-color: rgba(255, 0, 0, 0.4);
+  height: 110px;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.center-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  border: 1px solid red;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+.center-dot.dark {
+  background-color: black;
+}
+
+/*
+    <div class="clock">
+        <div class="needle needle-hour"></div>
+        <div class="needle needle-minute"></div>
+        <div class="needle needle-second"></div>
+        <div class="center-dot"></div>
+    </div>
+*/
+/* ------------------------------------------------------------------------------------------------- */
+.digital-clock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: 500ms ease;
+}
+.digital-clock.dark {
+  color: white;
+}
+.hour,
+.minute,
+.second,
+.pm-or-am {
+  text-align: center;
+  padding: 0px 5px;
+  min-width: 75px;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(131, 131, 131);
+  font-size: 16px;
+}
+.week-day,
+.month,
+.day-number {
+  padding: 0px 5px;
+  color: rgb(131, 131, 131);
+}
+.day-number {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  font-weight: bold;
+  transition: 500ms ease;
+  font-size: 14px;
+}
+.day-number.dark {
+  background-color: white;
+  color: black;
+}

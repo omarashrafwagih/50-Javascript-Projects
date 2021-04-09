@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <link rel='icon' href='./fav-icon.svg'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Theme Clock</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="mode">
+        <i class="far fa-moon"></i>
+    </div>
+    <div class="sound">
+        <i class="fas fa-volume-off"></i>
+    </div>
+
+
+    <div class="clock">
+        <div class="needle needle-hour"></div>
+        <div class="needle needle-minute"></div>
+        <div class="needle needle-second"></div>
+        <div class="center-dot"></div>
+    </div>
+
+    <div class="digital-clock">
+        <div class="hour">00</div>:
+        <div class="minute">00</div>:
+        <div class="second">00</div>
+        <div class="pm-or-am">AM</div>
+    </div>
+    <div class="date-container">
+        <div class="week-day">Sunday</div>
+        <div class="month">Jan</div>
+        <div class="day-number">35</div>
+    </div>
+
+
+    <audio src="./auidos/tick.mp3"></audio>
+    <script src="./main.js"></script>
+</body>
+
+</html>
