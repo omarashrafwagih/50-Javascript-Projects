@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+/* ------------------------------------------------------------------------------------------------- */
+
+.left {
+  width: 28%;
+  height: 100%;
+  position: relative;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  transition: 1000ms;
+  top: -300%;
+}
+.left .down-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  right: 0;
+  width: 40px;
+  height: 50px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: rgb(116, 116, 116);
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+.info .text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.text h3 {
+  font-size: 3vmax;
+}
+.text span {
+  margin-top: 8px;
+  font-size: 16px;
+}
+.left .text:nth-of-type(1) {
+  background-color: #202e33;
+}
+.left .text:nth-of-type(2) {
+  background-color: #072339;
+}
+.left .text:nth-of-type(3) {
+  background-color: #e9425c;
+}
+.left .text:nth-of-type(4) {
+  background-color: #3e1e06;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+.right {
+  width: 72%;
+  height: 100%;
+  position: relative;
+}
+.images {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400%;
+  top: 0;
+  z-index: -1;
+  transition: 1000ms;
+}
+.right .up-btn {
+  cursor: pointer;
+  position: absolute;
+  bottom: 55%;
+  left: 0;
+  width: 40px;
+  height: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: rgb(116, 116, 116);
+  background-color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+}
+.images .image {
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.right .image:nth-of-type(1) {
+  background-image: url(./images/bird.jpeg);
+}
+.right .image:nth-of-type(2) {
+  background-image: url(./images/flower.jpeg);
+}
+.right .image:nth-of-type(3) {
+  background-image: url(./images/sky.jpeg);
+}
+.right .image:nth-of-type(4) {
+  background-image: url(./images/castle.jpeg);
+}
+
+@media (max-width: 768px) {
+  .left {
+    position: absolute;
+    width: 100%;
+    opacity: 0.4;
+  }
+  .left .down-btn {
+    display: none;
+  }
+
+  .left .text h3 {
+    font-size: 7vmax;
+  }
+  .right {
+    width: 100%;
+  }
+}
