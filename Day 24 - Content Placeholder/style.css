@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+.card {
+  width: 300px;
+  height: 330px;
+  box-shadow: 0px 3px 13px -5px black;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.top-image {
+  height: 50%;
+  width: 100%;
+  background-size: cover;
+  filter: none;
+  transition: 200ms;
+}
+.top-image:hover {
+  filter: sepia(0.5);
+}
+
+.data {
+  width: 100%;
+  padding: 15px;
+}
+.data h4 {
+  font-size: 16px;
+  height: 15px;
+}
+.data p {
+  font-size: 14px;
+  color: rgb(95, 95, 95);
+  margin-top: 5px;
+  height: 10px;
+}
+
+.dataTwo {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 30px;
+}
+.dataTwo .img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1);
+  transition: 200ms;
+}
+.dataTwo .img:hover {
+  transform: scale(1.1);
+}
+.dataTwo div:last-child {
+  margin-left: 8px;
+}
+.dataTwo h3 {
+  font-size: 14px;
+  letter-spacing: -1px;
+  height: 10px;
+  width: 200px;
+}
+.dataTwo span {
+  color: rgb(95, 95, 95);
+  font-size: 12px;
+  height: 10px;
+  width: 200px;
+  margin-top: 10px;
+  display: block;
+}
+
+.animated {
+  animation: linearGradient 1500ms forwards infinite;
+}
+
+@keyframes linearGradient {
+  0% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 0%, rgba(175, 175, 175, 0.75) 1%, rgba(212, 212, 212, 1) 2%);
+  }
+  5% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 5%, rgba(175, 175, 175, 0.75) 6%, rgba(212, 212, 212, 1) 7%);
+  }
+  10% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 10%, rgba(175, 175, 175, 0.75) 11%, rgba(212, 212, 212, 1) 12%);
+  }
+  15% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 15%, rgba(175, 175, 175, 0.75) 16%, rgba(212, 212, 212, 1) 17%);
+  }
+  20% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 20%, rgba(175, 175, 175, 0.75) 21%, rgba(212, 212, 212, 1) 22%);
+  }
+  25% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 25%, rgba(175, 175, 175, 0.75) 26%, rgba(212, 212, 212, 1) 27%);
+  }
+  30% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 30%, rgba(175, 175, 175, 0.75) 31%, rgba(212, 212, 212, 1) 32%);
+  }
+  35% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 35%, rgba(175, 175, 175, 0.75) 36%, rgba(212, 212, 212, 1) 37%);
+  }
+  40% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 40%, rgba(175, 175, 175, 0.75) 41%, rgba(212, 212, 212, 1) 42%);
+  }
+  45% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 45%, rgba(175, 175, 175, 0.75) 46%, rgba(212, 212, 212, 1) 47%);
+  }
+  50% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 50%, rgba(175, 175, 175, 0.75) 51%, rgba(212, 212, 212, 1) 52%);
+  }
+  55% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 55%, rgba(175, 175, 175, 0.75) 56%, rgba(212, 212, 212, 1) 57%);
+  }
+  60% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 60%, rgba(175, 175, 175, 0.75) 61%, rgba(212, 212, 212, 1) 62%);
+  }
+  65% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 65%, rgba(175, 175, 175, 0.75) 66%, rgba(212, 212, 212, 1) 67%);
+  }
+  70% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 70%, rgba(175, 175, 175, 0.75) 71%, rgba(212, 212, 212, 1) 72%);
+  }
+  75% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 75%, rgba(175, 175, 175, 0.75) 76%, rgba(212, 212, 212, 1) 77%);
+  }
+  80% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 80%, rgba(175, 175, 175, 0.75) 81%, rgba(212, 212, 212, 1) 82%);
+  }
+  85% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 85%, rgba(175, 175, 175, 0.75) 86%, rgba(212, 212, 212, 1) 87%);
+  }
+  90% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 90%, rgba(175, 175, 175, 0.75) 91%, rgba(212, 212, 212, 1) 92%);
+  }
+  95% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 95%, rgba(175, 175, 175, 0.75) 96%, rgba(212, 212, 212, 1) 97%);
+  }
+  100% {
+    background: linear-gradient(90deg, rgba(212, 212, 212, 1) 100%, rgba(175, 175, 175, 0.75) 100%, rgba(212, 212, 212, 1) 100%);
+  }
+}
