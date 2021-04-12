@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgb(34, 34, 34);
+  width: 100%;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: background 500ms ease-in-out;
+  font-weight: bold;
+}
+nav.active {
+  background-color: white;
+  color: black;
+  padding: 10px 50px;
+  box-shadow: 0px 0px 10px black;
+}
+nav span {
+  font-size: 18px;
+  transition: 800ms;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 800ms;
+}
+nav ul li {
+  cursor: pointer;
+  margin: 0px 20px;
+  font-size: 14px;
+  transition: 150ms;
+}
+nav ul li:hover {
+  color: rgb(177, 121, 0);
+}
+
+.hero {
+  color: white;
+  height: 100vh;
+  width: 100%;
+  background-image: url(./images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.hero .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.hero .data {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.hero .data h4 {
+  font-size: 40px;
+}
+.hero .data p {
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+section {
+  padding: 30px;
+  width: 80%;
+  margin: auto;
+}
+
+section p {
+  color: rgb(92, 92, 92);
+  margin-top: 10px;
+}
