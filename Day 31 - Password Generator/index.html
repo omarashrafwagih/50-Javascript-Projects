@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <link rel='icon' href='./fav-icon.svg'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Password Generator</h1>
+
+        <div class="result-box">
+            <div class="password"></div>
+            <div title="Copy To Clipboard" class="copy"><i class="far fa-clipboard"></i></div>
+        </div>
+
+        <div class="options-box">
+            <div class="option">
+                <h5>Password Length</h5>
+                <input type="number" id="length" min="4" max="10" value="8">
+            </div>
+            <div class="option">
+                <h5>Include UpperCase Letters</h5>
+                <input type="checkbox" id="uppercase">
+            </div>
+            <div class="option">
+                <h5>Include LowerCase Letters</h5>
+                <input type="checkbox" id="lowercase">
+            </div>
+            <div class="option">
+                <h5>Include Numbers</h5>
+                <input type="checkbox" id="number">
+            </div>
+            <div class="option">
+                <h5>Include Symbols</h5>
+                <input type="checkbox" id="symbol">
+            </div>
+        </div>
+
+        <button>Generate Password</button>
+
+    </div>
+
+
+    <div class="notification-area"></div>
+    <audio id="copy" src="./sounds/notificationsound.mp3"></audio>
+    <audio id="error" src="./sounds/error.mp3"></audio>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
