@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+.add {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  user-select: none;
+}
+.add i {
+  font-size: 22px;
+  margin-right: 5px;
+}
+.add:active {
+  transform: scale(0.95);
+}
+.remove {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  user-select: none;
+}
+.remove i {
+  font-size: 22px;
+  margin-right: 5px;
+}
+.remove:active {
+  transform: scale(0.95);
+}
+.notes {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  background-color: rgba(220, 255, 242, 0.8);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+}
+.note {
+  width: 350px;
+  margin: 25px;
+}
+.note .tools {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 100%;
+  background-color: teal;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+.note .tools i {
+  font-size: 18px;
+  margin: 0px 5px;
+  cursor: pointer;
+}
+.note .tools i:active {
+  transform: scale(0.95);
+}
+.notes textarea {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 400px;
+  min-height: 200px;
+  height: 300px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+}
+.notes textarea:focus {
+  outline: none;
+}
+.note textarea[disabled] {
+  background-color: rgb(234 234 234);
+  resize: none;
+}
