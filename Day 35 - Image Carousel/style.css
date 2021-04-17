@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+/* ---------------------------------------------------------------------------------------------- */
+/*
+  <div class="carousel">
+        <div class="carousel-images"></div>
+        <div class="carousel-buttons">
+            <i class="right fas fa-angle-double-right"></i>
+            <i class="left fas fa-angle-double-left"></i>
+        </div>
+    </div>
+*/
+
+.carousel {
+  width: 90vw;
+  max-width: 400px;
+  height: 90vw;
+  max-height: 400px;
+  overflow: hidden;
+}
+.carousel-images {
+  width: 100%;
+  height: 93%;
+  background-color: darkblue;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0;
+  transition: 250ms;
+}
+.carousel-images img {
+  max-width: 100%;
+}
+.carousel-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  z-index: 2;
+  background-color: chartreuse;
+}
+.carousel-buttons i {
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  width: 100%;
+  margin: 5px;
+  color: white;
+}
+.carousel-buttons i:active {
+  transform: scale(0.95);
+}
