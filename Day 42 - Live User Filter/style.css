@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+}
+/* ---------------------------------------------------------------------------------------------- */
+
+.container {
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 70%;
+}
+
+.title {
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  display: inline-block;
+  margin: 5px 0 20px;
+  color: #ccc;
+}
+
+.header {
+  background-color: #3e57db;
+  color: #fff;
+  padding: 30px 20px;
+}
+
+.header input {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.header input:focus {
+  outline: none;
+}
+
+.user-list {
+  background-color: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.user-list li {
+  display: flex;
+  padding: 8px 20px;
+}
+
+.user-list img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 60px;
+  width: 60px;
+}
+
+.user-list .user-info {
+  margin-left: 20px;
+}
+
+.user-list .user-info h4 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.user-list .user-info p {
+  font-size: 14px;
+}
+
+.user-list li:not(:last-of-type) {
+  border-bottom: 1px solid #eee;
+}
+
+.user-list li.hide {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 90%;
+    height: 90%;
+  }
+
+  .title {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    margin: 5px 0 10px;
+  }
+
+  .header {
+    padding: 15px 10px;
+  }
+
+  .header input {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .user-list li {
+    padding: 8px;
+  }
+
+  .user-list img {
+    height: 40px;
+    width: 40px;
+  }
+  .user-list .user-info h4 {
+    margin: 3px 0;
+    font-size: 14px;
+  }
+
+  .user-list .user-info p {
+    font-size: 12px;
+  }
+}
