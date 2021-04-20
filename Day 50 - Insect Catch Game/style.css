@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(102, 129, 247);
+  font-family: "Press Start 2P", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* ---------------------------------------------------------------------------------------------- */
+.hero {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero h1 {
+  color: white;
+  font-size: 2.3vmax;
+  text-align: center;
+}
+.hero button {
+  display: block;
+  font-family: inherit;
+  background-color: white;
+  color: rgb(127, 150, 255);
+  margin: auto;
+  height: 40px;
+  line-height: 0px;
+  padding: 22px 12px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hero button:hover {
+  color: rgba(57, 93, 255, 0.8);
+}
+.hero button:active {
+  color: rgba(57, 93, 255, 0.8);
+  transform: scale(0.97);
+}
+
+.choose {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.6vmax;
+  text-align: center;
+}
+.choose .insects-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.insects-container .box {
+  cursor: pointer;
+  margin: 10px;
+  border: 3px solid white;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms ease;
+}
+.insects-container .box:hover {
+  background-color: white;
+  color: rgb(102, 129, 247);
+}
+.insects-container .box h3 {
+  font-size: 1.3rem;
+}
+.insects-container .box img {
+  max-width: 50%;
+  margin-top: 10px;
+}
+
+.game-container {
+  display: none;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.game-container .overlay {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  font-size: 12px;
+}
+.game-container .upper-bar {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  color: white;
+}
+.game-container .game-area {
+  height: calc(100% - 60px);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.game-container .game-area .insect {
+  display: block;
+  height: 55px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.game-container .giveup {
+  background-color: #6681f7;
+  padding: 15px;
+  text-align: right;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.giveup i {
+  font-size: 20px;
+  transition: 200ms;
+}
+.giveup i:hover {
+  transform: scale(1.1) rotateZ(360deg);
+}
