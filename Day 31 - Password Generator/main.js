@@ -20,16 +20,6 @@ let symbolCheckBox = document.querySelector("#symbol");
 
 let generateBTN = document.querySelector("button");
 
-// -------------------- JUST FOR TRY
-/*
-
-uppercaseCheckBox.onchange = function () {
-  console.log(uppercaseCheckBox.checked);
-};
-
-*/
-// -------------------- JUST FOR TRY
-
 function getLowerCaseLetter() {
   lowerCaseLetter += lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)];
 }
@@ -49,7 +39,12 @@ generateBTN.addEventListener("click", () => {
   number = "";
   symbol = "";
   passwordLength = "";
-  passwordLength = passwordLengthInput.value;
+  if (passwordLengthInput.value > 10) {
+    passwordLength = 10;
+    passwordLengthInput.value = 10;
+  } else {
+    passwordLength = passwordLengthInput.value;
+  }
   if (lowercaseCheckBox.checked || uppercaseCheckBox.checked || numberCheckBox.checked || symbolCheckBox.checked) {
     generatePassword();
   } else {

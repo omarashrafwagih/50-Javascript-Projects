@@ -76,7 +76,9 @@ h1 {
   align-items: center;
   margin-bottom: 15px;
 }
-
+input:first-of-type {
+  padding: 5px;
+}
 button {
   display: block;
   width: 90%;
