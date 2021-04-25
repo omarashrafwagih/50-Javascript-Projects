@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 body {
@@ -75,6 +76,7 @@ h2:last-of-type {
   border-top: 2px solid rgba(117, 117, 117, 0.15);
   cursor: pointer;
   user-select: none;
+  overflow-x: scroll;
 }
 .todos-container .todo.checked {
   text-decoration: line-through;

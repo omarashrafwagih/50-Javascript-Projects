@@ -59,6 +59,12 @@ function createTodo(text) {
     updateLocalStorage();
   });
 
+  todo.addEventListener("dblclick", (z) => {
+    z.preventDefault();
+    todo.remove();
+    updateLocalStorage();
+  });
+
   todosContainer.appendChild(todo);
   myInput.value = "";
 }
