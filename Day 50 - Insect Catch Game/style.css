@@ -89,6 +89,7 @@ body {
   align-items: center;
   transition: all 150ms ease;
 }
+
 .insects-container .box:hover {
   background-color: white;
   color: rgb(102, 129, 247);
@@ -101,6 +102,15 @@ body {
   margin-top: 10px;
 }
 
+@media (max-width: 576px) {
+  .insects-container .box {
+    width: 100px;
+    height: 100px;
+  }
+  .insects-container .box h3 {
+    font-size: 0.65rem;
+  }
+}
 .game-container {
   display: none;
   overflow: hidden;
@@ -120,7 +130,9 @@ body {
   text-align: center;
   line-height: 70px;
   font-size: 12px;
+  z-index: 2;
 }
+
 .game-container .upper-bar {
   height: 60px;
   display: flex;
@@ -129,6 +141,7 @@ body {
   padding: 10px 15px;
   color: white;
 }
+
 .game-container .game-area {
   height: calc(100% - 60px);
   padding: 20px;
@@ -161,4 +174,27 @@ body {
 }
 .giveup i:hover {
   transform: scale(1.1) rotateZ(360deg);
+}
+@media (max-width: 576px) {
+  .game-container .overlay {
+    font-size: 10px;
+    line-height: normal;
+    height: auto;
+    padding: 15px 0;
+  }
+  .game-container .upper-bar {
+    flex-direction: column;
+    justify-content: center;
+    font-size: 90%;
+  }
+  .game-container .upper-bar > * {
+    margin-bottom: 5px;
+  }
+  .game-container .giveup {
+    text-align: center;
+    font-size: 70%;
+  }
+  .giveup i {
+    font-size: 16px;
+  }
 }
