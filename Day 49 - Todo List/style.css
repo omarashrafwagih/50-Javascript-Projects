@@ -41,6 +41,17 @@ h2:last-of-type {
   left: 20px;
   top: 50px;
 }
+h6 {
+  color: red;
+  display: none;
+}
+@media (max-width: 576px) {
+  h6 {
+    display: block;
+    font-weight: normal;
+    font-size: 12px;
+  }
+}
 
 .todos-container {
   box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
