@@ -30,7 +30,7 @@ body {
 .container {
   margin: 50px;
   width: 340px;
-  height: 380px;
+  padding: 30px 0;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 6px;
 }
@@ -38,7 +38,6 @@ h1 {
   text-align: center;
   color: white;
   font-size: 24px;
-  margin-top: 30px;
 }
 .result-box {
   display: flex;
