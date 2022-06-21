@@ -21,10 +21,12 @@ let symbolCheckBox = document.querySelector("#symbol");
 let generateBTN = document.querySelector("button");
 
 function getLowerCaseLetter() {
-  lowerCaseLetter += lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)];
+  lowerCaseLetter +=
+    lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)];
 }
 function getUpperCaseLetter() {
-  upperCaseLetter += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
+  upperCaseLetter +=
+    upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
 }
 function getNumber() {
   number += numbers[Math.floor(Math.random() * numbers.length)];
@@ -39,13 +41,18 @@ generateBTN.addEventListener("click", () => {
   number = "";
   symbol = "";
   passwordLength = "";
-  if (passwordLengthInput.value > 10) {
-    passwordLength = 10;
-    passwordLengthInput.value = 10;
+  if (passwordLengthInput.value > 16) {
+    passwordLength = 16;
+    passwordLengthInput.value = 16;
   } else {
     passwordLength = passwordLengthInput.value;
   }
-  if (lowercaseCheckBox.checked || uppercaseCheckBox.checked || numberCheckBox.checked || symbolCheckBox.checked) {
+  if (
+    lowercaseCheckBox.checked ||
+    uppercaseCheckBox.checked ||
+    numberCheckBox.checked ||
+    symbolCheckBox.checked
+  ) {
     generatePassword();
   } else {
     const notification = document.createElement("div");
